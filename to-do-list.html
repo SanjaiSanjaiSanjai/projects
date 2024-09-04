@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="cs/todo-style.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" placeholder="Enter Frutie & veg...." id="input">
+        <button type="submit" onclick="result()">Add</button>
+    </div>
+    <div class="display" id="showing">
+        <!-- <p>test</p> -->
+    </div>
+<!-- End of HTML code Staring of JS code -->
+
+<script>
+    function result(){
+        const inputEL = document.getElementById("input").value;
+        // console.log(inputEL);
+        const displayEL = document.querySelector(".display");
+        // console.log(display);
+        // console.log();
+        let newEL =  document.createElement("p");
+        displayEL.appendChild(newEL);
+        displayEL.style.visibility= "visible";
+        newEL.innerHTML = inputEL;
+    }
+</script>
+</body>
+</html>
